@@ -21,9 +21,6 @@
   font-weight: 700;
 }
 
-
-
-
 html {
   font-size: 18px;
 }
@@ -47,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin: 0 ;
+  margin: 0;
 }
 
 //-----------------container-----------------
@@ -176,7 +173,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 24px 0 ;
+  margin: 24px 0;
 
   @media (min-width: 1120px) {
     margin: 42px 0 10px;
@@ -246,12 +243,13 @@ p {
 .horizontal-tab {
   white-space: nowrap;
   margin: 0 16px;
-  max-width: 1060px;
+  max-width: 1120px;
   overflow: auto;
   overflow-x: scroll;
 
   @media (min-width: 1120px) {
     overflow: hidden;
+    white-space: normal;
   }
 
   &__item {

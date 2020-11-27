@@ -212,13 +212,14 @@ p {
 .horizontal-tab {
   white-space: nowrap;
   margin: 0 16px;
-  max-width: 1060px;
+  max-width: 1120px;
   overflow: auto;
   overflow-x: scroll;
 }
 @media (min-width: 1120px) {
   .horizontal-tab {
     overflow: hidden;
+    white-space: normal;
   }
 }
 .horizontal-tab__item {
