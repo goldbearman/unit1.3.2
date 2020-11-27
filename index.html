@@ -70,7 +70,12 @@
 					</div>
 				</div>
 				<div class="text-image__picture">
-					<img src="img/mg_3223.jpg" alt="Вывеска компании">
+					<picture>
+						<source srcset="img/img_large.jpg" media="(min-width: 400px)" />
+						<source srcset="img/img_medium.jpg" media="(min-width: 768px)" />
+						<source srcset="img/img_large.jpg" media="(min-width: 1120px)" />
+						<img src="img/img_small.jpg" />
+					</picture>
 				</div>
 			</div>
 		</main>

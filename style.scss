@@ -212,6 +212,7 @@ p {
     margin-right: 32px;
     justify-content: space-between;
     align-items: center;
+    //font-weight: 700;
 
     @media (min-width: 1120px) {
       display: flex;
@@ -297,6 +298,7 @@ p {
       font-size: 14px;
       text-align: justify;
       line-height: 18px;
+      font-weight: 400;
 
       @media (min-width: 768px) {
         line-height: 20px;
@@ -310,7 +312,7 @@ p {
 
       h2 {
         font-size: 1rem;
-        font-weight: 700;
+        font-weight: 500;
       }
 
       &__expand-icon {
