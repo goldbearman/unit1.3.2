@@ -52,7 +52,7 @@ p {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: $darkgrey;
+  background-color: $grey;
 }
 
 .content {
@@ -206,24 +206,21 @@ p {
 
   .repair-link {
     display: none;
-    margin-right: 32px;
-    justify-content: space-between;
-    align-items: center;
-    //font-weight: 700;
 
     @media (min-width: 1120px) {
       display: flex;
-    }
-
-    a {
-      display: inline-block;
+      margin-right: 32px;
     }
 
     &__text {
+      width: 210px;
       padding: 5px 9px;
       text-decoration: none;
       color: $text-all;
       font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       &:hover {
         color: $text-hover;
@@ -232,43 +229,53 @@ p {
 
     &__repair {
       background: url("img/repair.svg");
+      display: inline-block;
     }
 
     &__checkstatus {
       background: url("img/checkstatus.svg");
+      display: inline-block;
     }
   }
 }
 
 .horizontal-tab {
   white-space: nowrap;
-  margin: 0 16px;
   max-width: 1120px;
   overflow: auto;
   overflow-x: scroll;
+  margin: 0 16px;
+
+  @media (min-width: 768px) {
+    margin: 0 24px;
+  }
 
   @media (min-width: 1120px) {
     overflow: hidden;
     white-space: normal;
+    margin: 0 34px;
   }
 
   &__item {
     color: $text;
     display: inline-block;
     padding: 6px 6px;
+    letter-spacing: -0.2px;
     text-decoration: none;
     border-radius: $radius;
+    border: 2px solid $grey;
 
     &:hover {
       border: 2px solid $button-border-hover;
       background-color: $white;
     }
+
+    &--active {
+      border: 2px solid $button-border;
+      background-color: $white;
+    }
   }
 
-  .active {
-    border: 2px solid $button-border;
-    background-color: $white;
-  }
 }
 
 .text-image {
@@ -279,15 +286,15 @@ p {
   }
 
   &__text {
-    padding: 0 16px 16px;
+    margin: 0 16px 16px;
 
     @media (min-width: 768px) {
       width: 50%;
-      padding: 0 24px 16px;
+      margin: 0 24px 16px;
     }
 
     @media (min-width: 1120px) {
-      padding: 0 11px 16px 34px;
+      margin: 0 11px 16px 34px;
     }
 
     p {
@@ -307,11 +314,8 @@ p {
     .read-more {
       display: flex;
       margin-top: 14px;
-
-      h2 {
-        font-size: 1rem;
-        font-weight: 500;
-      }
+      font-size: 1rem;
+      font-weight: 500;
 
       &__expand-icon {
         height: 24px;

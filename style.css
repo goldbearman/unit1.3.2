@@ -42,7 +42,7 @@ p {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #E5E5E5;
+  background-color: #F8F8F8;
 }
 
 .content {
@@ -181,59 +181,68 @@ p {
 }
 .main-title .repair-link {
   display: none;
-  margin-right: 32px;
-  justify-content: space-between;
-  align-items: center;
 }
 @media (min-width: 1120px) {
   .main-title .repair-link {
     display: flex;
+    margin-right: 32px;
   }
 }
-.main-title .repair-link a {
-  display: inline-block;
-}
 .main-title .repair-link__text {
+  width: 210px;
   padding: 5px 9px;
   text-decoration: none;
   color: #1B1C21;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .main-title .repair-link__text:hover {
   color: #ff2927;
 }
 .main-title .repair-link__repair {
   background: url("img/repair.svg");
+  display: inline-block;
 }
 .main-title .repair-link__checkstatus {
   background: url("img/checkstatus.svg");
+  display: inline-block;
 }
 
 .horizontal-tab {
   white-space: nowrap;
-  margin: 0 16px;
   max-width: 1120px;
   overflow: auto;
   overflow-x: scroll;
+  margin: 0 16px;
+}
+@media (min-width: 768px) {
+  .horizontal-tab {
+    margin: 0 24px;
+  }
 }
 @media (min-width: 1120px) {
   .horizontal-tab {
     overflow: hidden;
     white-space: normal;
+    margin: 0 34px;
   }
 }
 .horizontal-tab__item {
   color: #7E7E82;
   display: inline-block;
   padding: 6px 6px;
+  letter-spacing: -0.2px;
   text-decoration: none;
   border-radius: 6px;
+  border: 2px solid #F8F8F8;
 }
 .horizontal-tab__item:hover {
   border: 2px solid #ff2927;
   background-color: #FFFFFF;
 }
-.horizontal-tab .active {
+.horizontal-tab__item--active {
   border: 2px solid #B8FFEC;
   background-color: #FFFFFF;
 }
@@ -247,17 +256,17 @@ p {
   }
 }
 .text-image__text {
-  padding: 0 16px 16px;
+  margin: 0 16px 16px;
 }
 @media (min-width: 768px) {
   .text-image__text {
     width: 50%;
-    padding: 0 24px 16px;
+    margin: 0 24px 16px;
   }
 }
 @media (min-width: 1120px) {
   .text-image__text {
-    padding: 0 11px 16px 34px;
+    margin: 0 11px 16px 34px;
   }
 }
 .text-image__text p {
@@ -277,8 +286,6 @@ p {
 .text-image__text .read-more {
   display: flex;
   margin-top: 14px;
-}
-.text-image__text .read-more h2 {
   font-size: 1rem;
   font-weight: 500;
 }
