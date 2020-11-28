@@ -22,7 +22,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -208,33 +208,20 @@ p {
     display: none;
 
     @media (min-width: 1120px) {
-      display: flex;
+      display: block;
       margin-right: 32px;
     }
 
-    &__text {
-      width: 210px;
-      padding: 5px 9px;
+    &__repair {
+      background: url("img/repair.svg") no-repeat 100% ;
+      padding: 10px 50px 10px 24px;
+
       text-decoration: none;
       color: $text-all;
       font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
       &:hover {
-        color: $text-hover;
-      }
-    }
-
-    &__repair {
-      background: url("img/repair.svg");
-      display: inline-block;
-    }
-
-    &__checkstatus {
-      background: url("img/checkstatus.svg");
-      display: inline-block;
+            color: $text-hover;
+          }
     }
   }
 }
