@@ -195,7 +195,7 @@ p {
   font-weight: 500;
 }
 .main-title .repair-link a:hover {
-  color: #ff2927;
+  color: #FF3E79;
 }
 .main-title .repair-link__repair {
   background: url("img/repair.svg") no-repeat 100%;
@@ -237,7 +237,7 @@ p {
   border: 2px solid #F8F8F8;
 }
 .horizontal-tab__item:hover {
-  border: 2px solid #ff2927;
+  border: 2px solid #FF3E79;
   background-color: #FFFFFF;
 }
 .horizontal-tab__item--active {
@@ -282,10 +282,16 @@ p {
   }
 }
 .text-image__text .read-more {
-  display: flex;
   margin-top: 14px;
+  display: flex;
+  align-items: center;
   font-size: 1rem;
   font-weight: 500;
+  text-decoration: none;
+  color: #1B1C21;
+}
+.text-image__text .read-more:hover {
+  color: #FF3E79;
 }
 .text-image__text .read-more__expand-icon {
   height: 24px;
