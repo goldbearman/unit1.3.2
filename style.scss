@@ -176,19 +176,11 @@ p {
   margin: 24px 0;
 
   @media (min-width: 1120px) {
-    margin: 42px 0 10px;
+    margin: 42px 0 15px;
   }
 
   .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__highlight {
-      width: 4px;
-      height: 40px;
-      background-color: $highlighter;
-    }
+    background: url("img/highlight.svg") no-repeat;
 
     & h1 {
       font-size: 28px;
@@ -212,7 +204,6 @@ p {
       margin-right: 32px;
     }
 
-
     & a {
       padding: 10px 50px 10px 24px;
       text-decoration: none;
@@ -223,7 +214,6 @@ p {
         color: $text-hover;
       }
     }
-
 
     &__repair {
       background: url("img/repair.svg") no-repeat 100%;
@@ -253,7 +243,7 @@ p {
   }
 
   & li{
-    display: inline;
+    display: inline-block;
   }
 
   &__item {
@@ -312,24 +302,20 @@ p {
     }
 
     .read-more {
-      margin-top: 14px;
-      display: flex;
-      align-items: center;
+      display: block;
+      margin-top: 12px;
+      padding-left: 27px;
+      padding-top: 1px;
 
       font-size: 1rem;
       font-weight: 500;
       text-decoration: none;
       color: $text-all;
 
+      background: url("img/expand.svg") no-repeat;
+
       &:hover{
         color: $button-border-hover;
-      }
-
-      &__expand-icon {
-        height: 24px;
-        width: 24px;
-        background: url("img/expand.svg");
-        margin-right: 8px;
       }
     }
   }
