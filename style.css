@@ -78,25 +78,25 @@ p {
   }
 }
 .menu .sidebar-logo {
-  width: 230px;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
 }
 .menu .sidebar-logo__burger {
-  background: url("img/burger.svg");
+  margin: 0 16px;
+  background: url("img/burger.svg") no-repeat;
+}
+@media (min-width: 768px) {
+  .menu .sidebar-logo__burger {
+    margin: 0 20px 0 24px;
+  }
 }
 .menu .sidebar-logo__burger:hover {
   fill: #B8FFEC;
 }
-.menu .sidebar-logo__line-divider {
-  width: 2px;
-  height: 32px;
-  display: none;
-}
 @media (min-width: 768px) {
-  .menu .sidebar-logo__line-divider {
-    display: block;
+  .menu .sidebar-logo .divider-logo {
+    background: url("img/divider.svg") no-repeat 0 10px;
+    padding-left: 20px;
   }
 }
 .menu .sidebar-logo__icon-logo {
@@ -133,15 +133,22 @@ p {
   height: 32px;
 }
 .menu .contact-repair .repair {
-  width: 135px;
   display: flex;
   justify-content: space-evenly;
+  background: url("img/divider.svg") no-repeat 0 4px;
+}
+@media (min-width: 768px) {
+  .menu .contact-repair .repair {
+    margin-right: 8px;
+  }
 }
 .menu .contact-repair .repair__repair {
   background: url("img/repair.svg");
+  margin-left: 20px;
 }
 .menu .contact-repair .repair__checkstatus {
   background: url("img/checkstatus.svg");
+  margin: 0 16px;
 }
 
 .main-title {
@@ -182,7 +189,7 @@ p {
   }
 }
 .main-title .repair-link a {
-  padding: 10px 50px 10px 24px;
+  padding: 10px 60px 10px 24px;
   text-decoration: none;
   color: #1B1C21;
   font-weight: 500;
@@ -191,10 +198,10 @@ p {
   color: #FF3E79;
 }
 .main-title .repair-link__repair {
-  background: url("img/repair.svg") no-repeat 100%;
+  background: url("img/repair.svg") no-repeat 99%;
 }
 .main-title .repair-link__checkstatus {
-  background: url("img/checkstatus.svg") no-repeat 100%;
+  background: url("img/checkstatus.svg") no-repeat 99%;
 }
 
 .horizontal-tab {
@@ -264,7 +271,6 @@ p {
   height: 90px;
   overflow: hidden;
   font-size: 14px;
-  text-align: justify;
   line-height: 18px;
   font-weight: 400;
 }
@@ -275,7 +281,7 @@ p {
   }
 }
 .text-image__text .read-more {
-  display: block;
+  display: inline-block;
   margin-top: 12px;
   padding-left: 27px;
   padding-top: 1px;
