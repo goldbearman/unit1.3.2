@@ -1,0 +1,33 @@
+@import "vars";
+
+.sidebar {
+
+  .sidebar-menu {
+    width: 320px;
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+
+    & li {
+
+    }
+
+    & a {
+      border: 1px solid blue;
+      text-decoration: none;
+      display: block;
+      padding: 16px 24px;
+      color: $text-all;
+    }
+
+    &--active{
+      background: url("img/highlight-sidebar.svg") no-repeat 0 10px;
+      color: $text;
+    }
+
+  }
+}
+
+
