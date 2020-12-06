@@ -1,4 +1,18 @@
 @import "vars";
+@import "fonts";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'TTLakes', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: $text-all;
+  font-weight: 500;
+}
 
 .sidebar {
 
@@ -22,11 +36,11 @@
       color: $text-all;
     }
 
-    &--active{
+    &--active a {
       background: url("img/highlight-sidebar.svg") no-repeat 0 10px;
       color: $text;
-    }
 
+    }
   }
 }
 

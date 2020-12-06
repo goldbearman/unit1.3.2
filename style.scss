@@ -1,51 +1,6 @@
 @import "vars";
+@import "fonts";
 
-@font-face {
-  font-family: 'TTLakes';
-  src: url("fonts/TTLakes-Regular.woff") format('woff'),
-  url("fonts/TTLakes-Regular.ttf") format('ttf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'TTLakes';
-  src: url("fonts/TTLakes-Medium.woff") format('woff'),
-  url("fonts/TTLakes-Medium.ttf") format('ttf');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'TTLakes';
-  src: url("fonts/TTLakes-Bold.woff") format('woff'),
-  url("fonts/TTLakes-Bold.ttf") format('ttf');
-  font-weight: 700;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  margin: 0;
-  font-family: 'TTLakes', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6rem;
-  color: $text-all;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
 
 //-----------------container-----------------
 
