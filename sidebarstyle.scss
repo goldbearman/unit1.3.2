@@ -44,4 +44,11 @@ body {
   }
 }
 
-
+.comunication{
+  .item{
+    fill: red;
+    &:hover{
+      fill: green;
+    }
+  }
+}
