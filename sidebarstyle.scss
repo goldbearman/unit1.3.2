@@ -14,41 +14,104 @@ body {
   font-weight: 500;
 }
 
+
 .sidebar {
+padding: 24px;
 
-  .sidebar-menu {
-    width: 320px;
-    background-color: $white;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 16px;
+  .sidebar-nav {
 
-    & li {
+    .sidebar-menu {
+      width: 320px;
+      background-color: $white;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 16px;
 
+      & a {
+
+        text-decoration: none;
+        display: block;
+        padding: 16px 0;
+        color: $text-all;
+      }
+
+      &--active a {
+        margin-left: -24px;
+        background: url("img/highlight-sidebar.svg") no-repeat 0 12px;
+        padding-left: 24px;
+        color: $text;
+      }
+    }
+  }
+
+  .footer {
+
+    margin-top: 60px;
+
+    &__contact-icons {
+      margin-bottom: 14px;
     }
 
-    & a {
-      border: 1px solid blue;
-      text-decoration: none;
+    .contact-icons {
+      padding: 0;
+
+      &__item {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-right: 14px;
+
+        fill: $text-hover;
+
+        &:hover {
+          fill: green;
+        }
+      }
+    }
+
+    &__mail {
       display: block;
-      padding: 16px 24px;
+      font-weight: 500;
+      text-decoration: none;
       color: $text-all;
+      &:hover{
+        color: $text-hover;
+      }
     }
 
-    &--active a {
-      background: url("img/highlight-sidebar.svg") no-repeat 0 10px;
-      color: $text;
+    &__phone {
+      display: block;
+      margin: 12px 0 40px;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+      color: $text-all;
+      &:hover{
+        color: $text-hover;
+      }
+    }
 
+    .languages{
+
+      &__button{
+        display: inline-block;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text-all;
+        text-transform: uppercase;
+        margin-right: 6px;
+      }
+
+      input{
+        display: none;
+      }
+      input:checked ~ label{
+        color: $text;
+      }
     }
   }
-}
 
-.comunication{
-  .item{
-    fill: red;
-    &:hover{
-      fill: green;
-    }
-  }
 }
