@@ -16,12 +16,13 @@ body {
 
 
 .sidebar {
-padding: 24px;
+  width: 320px;
+  padding: 24px;
 
   .sidebar-nav {
 
     .sidebar-menu {
-      width: 320px;
+
       background-color: $white;
       margin: 0;
       padding: 0;
@@ -75,7 +76,8 @@ padding: 24px;
       font-weight: 500;
       text-decoration: none;
       color: $text-all;
-      &:hover{
+
+      &:hover {
         color: $text-hover;
       }
     }
@@ -87,14 +89,15 @@ padding: 24px;
       font-weight: 700;
       text-decoration: none;
       color: $text-all;
-      &:hover{
+
+      &:hover {
         color: $text-hover;
       }
     }
 
-    .languages{
+    .languages {
 
-      &__button{
+      &__button {
         display: inline-block;
         background: none;
         border: none;
@@ -105,10 +108,11 @@ padding: 24px;
         margin-right: 6px;
       }
 
-      input{
+      input {
         display: none;
       }
-      input:checked ~ label{
+
+      input:checked ~ label {
         color: $text;
       }
     }
