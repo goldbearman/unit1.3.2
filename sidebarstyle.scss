@@ -14,10 +14,53 @@ body {
   font-weight: 500;
 }
 
+//---------------------template----------------------------
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: $text-hover;
+  &:hover {
+    fill: green;
+  }
+}
+
+//---------------------sidebar----------------------------
 
 .sidebar {
+  border: 1px solid red;
   width: 320px;
-  padding: 24px;
+  height: 100vh;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .burger-logo {
+
+      display: flex;
+      align-items: center;
+      padding: 18px 0;
+
+
+      &__item {
+        margin-right: 16px;
+      }
+
+      &__logo {
+        display: block;
+        height: 52px;
+        width: auto;
+        text-decoration: none;
+      }
+    }
+  }
+
 
   .sidebar-nav {
 
@@ -48,7 +91,8 @@ body {
 
   .footer {
 
-    margin-top: 60px;
+    margin-top: auto;
+    margin-bottom: 30px;
 
     &__contact-icons {
       margin-bottom: 14px;
@@ -58,16 +102,8 @@ body {
       padding: 0;
 
       &__item {
-        width: 40px;
-        height: 40px;
         display: inline-block;
         margin-right: 14px;
-
-        fill: $text-hover;
-
-        &:hover {
-          fill: green;
-        }
       }
     }
 
@@ -117,5 +153,4 @@ body {
       }
     }
   }
-
 }
