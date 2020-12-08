@@ -32,11 +32,12 @@ body {
 
 .sidebar {
   border: 1px solid red;
-  width: 320px;
+  max-width: 320px;
   height: 100vh;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
+  z-index: 1000;
 
   //---------------------header----------------------------
 
@@ -77,31 +78,51 @@ body {
       list-style: none;
       font-size: 16px;
 
-      & a{
+      & a {
         text-decoration: none;
         display: block;
         padding: 16px 0;
         color: $text-all;
         transition: 0.7s;
 
-        &:hover{
+        &:hover {
           color: $text-hover;
-          transform: scale(1.2) translateX(30px) ;
+          transform: scale(1.2) translateX(30px);
         }
       }
 
-      &--active a{
+      &--active a {
         margin-left: -24px;
         background: url("img/highlight-sidebar.svg") no-repeat 0 12px;
         padding-left: 24px;
         color: $text;
-        &:hover{
+
+        &:hover {
           transform: none;
           color: $text;
         }
       }
     }
   }
+
+  .form-grope {
+
+    label {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url("img/burger--active.svg");
+    }
+
+    input {
+      display: none;
+
+      &[name="rules"]:checked ~ div.sidebar {
+        transform: translateY(-100px);
+      }
+    }
+  }
+
 
   //---------------------footer----------------------------
 
