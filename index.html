@@ -2,82 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Unit1.3</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SideBar</title>
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <meta name="viewport" content="height=device-height, initial-scale=1">
 </head>
 <body>
 
-<div class="container">
 
-    <div class="content">
-        <header>
-            <nav class="menu">
-                <div class="sidebar-logo">
-                    <a class="icon sidebar-logo__burger" href="#"></a>
-                    <div class="divider-logo">
-                        <a href="#"><img class="divider-logo__icon-logo" src="img/brand.svg" alt="Логотип компании"></a>
-                    </div>
-                </div>
+<div class="sidebar">
 
-                <div class="contact-repair">
-                    <div class="contact">
-                        <a class="icon contact__call" href="#"></a>
-                        <a class="icon contact__chat" href="#"></a>
-                        <a class="icon contact__profile" href="#"></a>
-                    </div>
-                    <div class="repair">
-                        <a class="icon repair__repair" href="#"></a>
-                        <a class="icon repair__checkstatus" href="#"></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+    <header class="header">
+        <div class="burger-logo">
+            <a href="#" class="icon burger-logo__item">
+                <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#burger--active"></use>
+                </svg>
+            </a>
+            <a class="burger-logo__logo" href="#"><img class="logo" src="img/brand.svg" alt="Логотип компании"></a>
 
-        <main>
-            <div class="main-title">
-                <div class="title">
-                    <h1>Услуги и сервисы</h1>
-                </div>
-                <div class="repair-link">
-                    <a class="repair-link__repair" href="#">Оставить заявку</a>
-                    <a class="repair-link__checkstatus" href="#">Статус ремонта</a>
-                </div>
+        </div>
+        <a href="#" class="icon burger-logo__search">
+            <svg width="40" height="40">
+                <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+        </a>
+    </header>
+
+    <main class="sidebar-nav">
+        <nav>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu--active"><a href="#">Ремонт техники</a></li>
+                <li><a href="#">Услуги и сервисы</a></li>
+                <li><a href="#">Корпоративным клиентам</a></li>
+                <li><a href="#">Продавцам техники</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Производителям</a></li>
+                <li><a href="#">Наши сервисные центры</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer class="footer">
+        <div class="contact-icons footer__contact-icons">
+            <a href="#" class="icon contact-icons__item">
+                <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#call"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="icon contact-icons__item">
+                <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#chat"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="icon contact-icons__item">
+                <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#profile">mail@cps.com</use>
+                </svg>
+            </a>
+        </div>
+        <a href="mailto:mail@cps.com" class="footer__mail">mail@cps.com</a>
+        <a href="tel:88008908900" class="footer__phone">8 800 890 8900</a>
+
+        <div class="languages">
+            <div class="languages__button languages__russian">
+                <input type="radio" name="language" id="russian" checked>
+                <label for="russian">ru</label>
             </div>
-            <nav>
-                <ul class="horizontal-tab">
-                    <li><a href="#" class="horizontal-tab__item horizontal-tab__item--active">Ремонтируемые бренды</a>
-                    </li>
-                    <li><a href="#" class="horizontal-tab__item">Ремонтируемые устройства</a></li>
-                    <li><a href="#" class="horizontal-tab__item">Цены на услуги</a></li>
-                    <li><a href="#" class="horizontal-tab__item">Адреса сервисных центров</a></li>
-                    <li><a href="#" class="horizontal-tab__item">Специальные цены</a></li>
-                    <li><a href="#" class="horizontal-tab__item">Отзывы</a></li>
-                </ul>
-            </nav>
-            <div class="text-image">
-                <div class="text-image__text">
-                    <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                        отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br/><br/>
-                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
-                        большое
-                        количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-                        очередь, советуют нас родным и близким.</p>
-
-                    <a class="read-more" href="http://yandex.ru">Читать далее</a>
-                </div>
-                <div class="text-image__picture">
-                    <picture>
-                        <source srcset="img/img_large.jpg" media="(min-width: 400px)"/>
-                        <source srcset="img/img_medium.jpg" media="(min-width: 768px)"/>
-                        <source srcset="img/img_large.jpg" media="(min-width: 1120px)"/>
-                        <img src="img/img_small.jpg" alt="Логотип компании"/>
-                    </picture>
-                </div>
+            <div class="languages__button languages__english">
+                <input type="radio" name="language" id="english">
+                <label for="english">en</label>
             </div>
-        </main>
+            <div class="languages__button languages__chinese">
+                <input type="radio" name="language" id="chinese">
+                <label for="chinese">ch</label>
+            </div>
 
-    </div>
+        </div>
+    </footer>
 </div>
+
 </body>
+
 </html>

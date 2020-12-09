@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unit1.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="content">
+        <header>
+            <nav class="menu">
+                <div class="sidebar-logo">
+                    <a class="icon sidebar-logo__burger" href="#"></a>
+                    <div class="divider-logo">
+                        <a href="#"><img class="divider-logo__icon-logo" src="img/brand.svg" alt="Логотип компании"></a>
+                    </div>
+                </div>
+
+                <div class="contact-repair">
+                    <div class="contact">
+                        <a class="icon contact__call" href="#"></a>
+                        <a class="icon contact__chat" href="#"></a>
+                        <a class="icon contact__profile" href="#"></a>
+                    </div>
+                    <div class="repair">
+                        <a class="icon repair__repair" href="#"></a>
+                        <a class="icon repair__checkstatus" href="#"></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="main-title">
+                <div class="title">
+                    <h1>Услуги и сервисы</h1>
+                </div>
+                <div class="repair-link">
+                    <a class="repair-link__repair" href="#">Оставить заявку</a>
+                    <a class="repair-link__checkstatus" href="#">Статус ремонта</a>
+                </div>
+            </div>
+            <nav>
+                <ul class="horizontal-tab">
+                    <li><a href="#" class="horizontal-tab__item horizontal-tab__item--active">Ремонтируемые бренды</a>
+                    </li>
+                    <li><a href="#" class="horizontal-tab__item">Ремонтируемые устройства</a></li>
+                    <li><a href="#" class="horizontal-tab__item">Цены на услуги</a></li>
+                    <li><a href="#" class="horizontal-tab__item">Адреса сервисных центров</a></li>
+                    <li><a href="#" class="horizontal-tab__item">Специальные цены</a></li>
+                    <li><a href="#" class="horizontal-tab__item">Отзывы</a></li>
+                </ul>
+            </nav>
+            <div class="text-image">
+                <div class="text-image__text">
+                    <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                        отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br/><br/>
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                        большое
+                        количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                        очередь, советуют нас родным и близким.</p>
+
+                    <a class="read-more" href="http://yandex.ru">Читать далее</a>
+                </div>
+                <div class="text-image__picture">
+                    <picture>
+                        <source srcset="img/img_large.jpg" media="(min-width: 400px)"/>
+                        <source srcset="img/img_medium.jpg" media="(min-width: 768px)"/>
+                        <source srcset="img/img_large.jpg" media="(min-width: 1120px)"/>
+                        <img src="img/img_small.jpg" alt="Логотип компании"/>
+                    </picture>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>
