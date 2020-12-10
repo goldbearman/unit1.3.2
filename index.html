@@ -12,19 +12,19 @@
 
     <header class="header">
         <div class="burger-logo">
-            <a href="#" class="icon burger-logo__item">
+            <button class="icon burger-logo__item">
                 <svg width="40" height="40">
                     <use xlink:href="img/sprite.svg#burger--active"></use>
                 </svg>
-            </a>
+            </button>
             <a class="burger-logo__logo" href="#"><img class="logo" src="img/brand.svg" alt="Логотип компании"></a>
 
         </div>
-        <a href="#" class="icon icon-search">
+        <button class="icon icon-search">
             <svg width="40" height="40">
                 <use xlink:href="img/sprite.svg#search"></use>
             </svg>
-        </a>
+        </button>
     </header>
 
     <main class="sidebar-nav">
@@ -44,41 +44,39 @@
 
     <footer class="footer">
         <div class="contact-icons footer__contact-icons">
-            <a href="#" class="icon contact-icons__item">
+            <button class="icon contact-icons__item">
                 <svg width="40" height="40">
                     <use xlink:href="img/sprite.svg#call"></use>
                 </svg>
-            </a>
+            </button>
 
-            <a href="#" class="icon contact-icons__item">
+            <button class="icon contact-icons__item">
                 <svg width="40" height="40">
                     <use xlink:href="img/sprite.svg#chat"></use>
                 </svg>
-            </a>
+            </button>
 
-            <a href="#" class="icon contact-icons__item">
+            <button class="icon contact-icons__item">
                 <svg width="40" height="40">
                     <use xlink:href="img/sprite.svg#profile"></use>
                 </svg>
-            </a>
+            </button>
         </div>
 
-        <a href="mailto:mail@cps.com" class="footer__mail">mail@cps.com</a>
-        <a href="tel:88008908900" class="footer__phone">8 800 890 8900</a>
+        <div class="contacts">
+            <a href="mailto:mail@cps.com" class="contacts__mail">mail@cps.com</a>
+            <a href="tel:88008908900" class="contacts__phone">8 800 890 8900</a></div>
 
         <div class="languages">
-            <div class="languages__button languages__russian">
-                <input type="radio" name="language" id="russian" checked>
-                <label for="russian">ru</label>
-            </div>
-            <div class="languages__button languages__english">
-                <input type="radio" name="language" id="english">
-                <label for="english">en</label>
-            </div>
-            <div class="languages__button languages__chinese">
-                <input type="radio" name="language" id="chinese">
-                <label for="chinese">ch</label>
-            </div>
+            <button class="languages__button languages__button--active">
+                ru
+            </button>
+            <button class="languages__button">
+                en
+            </button>
+            <button class="languages__button">
+                ch
+            </button>
 
         </div>
     </footer>

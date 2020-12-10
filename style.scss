@@ -21,12 +21,18 @@ body {
   width: 40px;
   height: 40px;
   fill: $text-hover;
+  padding: 0;
+  background: none;
+  border: none;
   transition-property: fill, transform;
-  transition-duration: 0.3s , 0.7s;
+  transition-duration: 0.3s, 0.7s;
 
   &:hover {
     transform: scale(1.3);
     fill: $highlighter;
+  }
+  &:focus{
+    outline: none;
   }
 }
 
@@ -88,7 +94,7 @@ body {
         padding: 16px 0;
         color: $text-all;
         transition-property: color, transform;
-        transition-duration: 0.3s , 0.7s;
+        transition-duration: 0.3s, 0.7s;
 
         &:hover {
           color: $text-hover;
@@ -96,15 +102,18 @@ body {
         }
       }
 
-      &--active a {
-        margin-left: -24px;
-        background: url("img/highlight-sidebar.svg") no-repeat 0 12px;
-        padding-left: 24px;
-        color: $text;
+      &__item {
 
-        &:hover {
-          transform: none;
+        &--active a {
+          margin-left: -24px;
+          background: url("img/highlight-sidebar.svg") no-repeat 0 12px;
+          padding-left: 24px;
           color: $text;
+
+          &:hover {
+            transform: none;
+            color: $text;
+          }
         }
       }
     }
@@ -130,31 +139,35 @@ body {
       }
     }
 
-    &__mail {
-      display: block;
-      font-weight: 500;
-      text-decoration: none;
-      color: $text-all;
-      transition-duration: 0.7s;
+    .contacts{
 
-      &:hover {
-        color: $text-hover;
+      &__mail {
+        display: block;
+        font-weight: 500;
+        text-decoration: none;
+        color: $text-all;
+        transition-duration: 0.7s;
+
+        &:hover {
+          color: $text-hover;
+        }
+      }
+
+      &__phone {
+        display: block;
+        margin: 12px 0 40px;
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $text-all;
+        transition-duration: 0.7s;
+
+        &:hover {
+          color: $text-hover;
+        }
       }
     }
 
-    &__phone {
-      display: block;
-      margin: 12px 0 40px;
-      font-size: 24px;
-      font-weight: 700;
-      text-decoration: none;
-      color: $text-all;
-      transition-duration: 0.7s;
-
-      &:hover {
-        color: $text-hover;
-      }
-    }
 
     .languages {
 
@@ -166,15 +179,15 @@ body {
         font-weight: 500;
         color: $text-all;
         text-transform: uppercase;
-        margin-right: 6px;
-      }
+        margin-right: 7px;
+        padding: 0;
 
-      input {
-        display: none;
-      }
-
-      input:checked ~ label {
-        color: $text;
+        &--active{
+          color: $text;
+        }
+        &:focus{
+          outline: none;
+        }
       }
     }
   }
