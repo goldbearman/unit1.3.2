@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "TTLakes";
+  src: url("fonts/TTLakes-Regular.woff") format("woff"), url("fonts/TTLakes-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("fonts/TTLakes-Medium.woff") format("woff"), url("fonts/TTLakes-Medium.ttf") format("ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("fonts/TTLakes-Bold.woff") format("woff"), url("fonts/TTLakes-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "TTLakes", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #1B1C21;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #FFFFFF;
+  stroke: #FF3E79;
+  padding: 0;
+  background: none;
+  border: none;
+  transition-property: fill, transform;
+  transition-duration: 0.3s, 0.7s;
+}
+.icon:hover {
+  stroke: #41F6D7;
+}
+.icon:focus {
+  outline: none;
+}
+
+.wrapper {
+  padding: 30px;
+  min-height: 100%;
+  background-color: #F8F8F8;
+}
+
+.image-slider {
+  padding: 30px 0 70px 0;
+  width: auto;
+}
+.image-slider .swiper-slide {
+  width: auto;
+}
+.image-slider__image {
+  text-align: center;
+  width: 224px;
+  height: 72px;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  margin-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid #E5E5E5;
+}
+
+/*# sourceMappingURL=slider_style.css.map */

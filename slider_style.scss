@@ -1,0 +1,58 @@
+@import "fonts";
+@import "vars";
+
+//---------------------template----------------------------
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: $white;
+  stroke: #FF3E79;
+  padding: 0;
+  background: none;
+  border: none;
+  transition-property: fill, transform;
+  transition-duration: 0.3s, 0.7s;
+
+  &:hover {
+    stroke: $highlighter;
+
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//---------------------wrapper----------------------------
+
+.wrapper {
+  padding: 30px;
+  min-height: 100%;
+  background-color: $grey;
+}
+
+.image-slider{
+  padding: 30px 0 70px 0;
+  width: auto;
+
+  & .swiper-slide{
+    width: auto;
+  }
+
+  &__image {
+    text-align: center;
+    width: 224px;
+    height: 72px;
+    border-radius: 6px;
+    background-color: $white;
+    margin-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border: 1px solid $darkgrey;
+
+  }
+}
