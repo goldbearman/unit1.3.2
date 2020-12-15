@@ -28,22 +28,67 @@
 //---------------------wrapper----------------------------
 
 .wrapper {
-  padding: 30px;
+  //padding: 30px;
   min-height: 100%;
   background-color: $grey;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+
+
+  &__title {
+    padding: 30px;
+    background-color: $white;
+  }
 }
 
-.image-slider{
-  padding: 30px 0 70px 0;
-  width: auto;
+.image-slider {
+  padding: 30px 0 80px 0;
+  margin: 16px;
+  white-space: normal;
 
-  & .swiper-slide{
+  @media (min-width: 768px) {
+    margin:24px;
+  }
+  @media (min-width: 1120px) {
+    margin:32px;
+  }
+
+
+  .swiper-wrapper {
+    @media (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  & .swiper-slide {
     width: auto;
+    display: inline-block;
+    @media (min-width: 768px) {
+
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 50px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: $swiper;
   }
 
   &__image {
     text-align: center;
-    width: 224px;
+    width: 240px;
     height: 72px;
     border-radius: 6px;
     background-color: $white;
@@ -53,6 +98,13 @@
     align-items: center;
     padding: 0 16px;
     border: 1px solid $darkgrey;
-
+    margin-bottom: 16px;
+    @media (min-width: 768px) {
+      margin-right: 0;
+      width: 224px;
+    }
+    @media (min-width: 1120px) {
+      width: 240px;
+    }
   }
 }
