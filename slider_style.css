@@ -98,11 +98,11 @@ p {
     margin: 0 14px;
   }
 }
-.wrapper .image-slider .swiper-wrapper {
+.wrapper .image-slider__wrapper {
   max-height: 170px;
 }
 @media (min-width: 768px) {
-  .wrapper .image-slider .swiper-wrapper {
+  .wrapper .image-slider__wrapper {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -111,18 +111,18 @@ p {
 .wrapper .image-slider .read-more-input:checked ~ .swiper-wrapper {
   max-height: none;
 }
-.wrapper .image-slider .swiper-slide {
+.wrapper .image-slider__slide {
   width: auto;
   display: inline-block;
 }
 @media (min-width: 768px) {
-  .wrapper .image-slider .swiper-slide {
+  .wrapper .image-slider__slide {
     width: 30%;
     margin: 0 1.66%;
   }
 }
 @media (min-width: 1120px) {
-  .wrapper .image-slider .swiper-slide {
+  .wrapper .image-slider__slide {
     width: 22%;
     margin: 0 1.5%;
   }
@@ -171,12 +171,10 @@ p {
   display: inline-block;
   margin-top: 12px;
   margin-left: 1.6%;
-  padding-left: 27px;
-  padding-top: 1px;
   font-size: 1rem;
   font-weight: 500;
   color: #1B1C21;
-  background: url("img/expand.svg") no-repeat;
+  position: relative;
 }
 @media (max-width: 768px) {
   .wrapper .read-more {
@@ -188,9 +186,12 @@ p {
 }
 .wrapper .read-more-input ~ .read-more:after {
   content: "Показать все";
+  padding-left: 27px;
+  background: url("img/expand.svg") no-repeat 0 -1px;
 }
 .wrapper .read-more-input:checked ~ .read-more:after {
   content: "Скрыть";
+  background: url("img/expand-up.svg") no-repeat 0 0;
 }
 
 /*# sourceMappingURL=slider_style.css.map */

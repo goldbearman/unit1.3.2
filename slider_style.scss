@@ -17,7 +17,6 @@
 
   &:hover {
     stroke: $highlighter;
-
   }
 
   &:focus {
@@ -35,7 +34,6 @@
   width: 100%;
   margin: 0 auto;
 
-
   &__title {
     padding: 16px;
     background-image: linear-gradient(to right, $grey, $white);
@@ -48,10 +46,8 @@
     }
     @media (min-width: 1120px) {
       padding: 16px 32px;
-
     }
   }
-
 
   .image-slider {
     padding: 16px 0 70px 0;
@@ -66,8 +62,8 @@
       margin: 0 14px;
     }
 
-
-    .swiper-wrapper {
+    &__wrapper {
+      //.swiper-wrapper {
       max-height: 170px;
       @media (min-width: 768px) {
         display: flex;
@@ -80,7 +76,8 @@
       max-height: none;
     }
 
-    .swiper-slide {
+    &__slide{
+    //.swiper-slide {
       width: auto;
       display: inline-block;
       @media (min-width: 768px) {
@@ -120,7 +117,6 @@
       border: 1px solid $darkgrey;
       margin-bottom: 16px;
 
-
       @media (min-width: 768px) {
         width: 100%;
       }
@@ -138,14 +134,12 @@
     display: inline-block;
     margin-top: 12px;
     margin-left: 1.6%;
-    padding-left: 27px;
-    padding-top: 1px;
 
     font-size: 1rem;
     font-weight: 500;
     color: $text-all;
+    position: relative;
 
-    background: url("img/expand.svg") no-repeat;
 
     @media (max-width: 768px) {
       display: none;
@@ -154,15 +148,17 @@
     &:hover {
       color: $button-border-hover;
     }
-
   }
 
   .read-more-input ~ .read-more:after {
     content: 'Показать все';
+    padding-left: 27px;
+    background: url("img/expand.svg") no-repeat 0 -1px;
   }
 
   .read-more-input:checked ~ .read-more:after {
     content: 'Скрыть';
+    background: url("img/expand-up.svg") no-repeat 0 0;
   }
 
 }
