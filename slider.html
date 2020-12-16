@@ -11,8 +11,11 @@
 <div class="wrapper">
     <div class="wrapper__title">Ремонт техники различных брендов</div>
     <!-- Slider main container -->
-    <div class="image-slider swiper-container" data-mobile = 'false'>
+    <div class="image-slider swiper-container" data-mobile='false'>
         <!-- Additional required wrapper -->
+
+        <input type="checkbox" class="read-more-input" id="show-hide">
+
         <div class="image-slider__wrapper swiper-wrapper">
             <!-- Slides -->
             <div class="image-slider__slide swiper-slide">
@@ -129,16 +132,14 @@
             </div>
 
         </div>
-        <!-- If we need pagination -->
+        <!-- pagination -->
         <div class="swiper-pagination"></div>
+        <!--        <div class="wrapper__hide-element">-->
 
-<!--        &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
-<!--        <div class="swiper-button-prev"></div>-->
-<!--        <div class="swiper-button-next"></div>-->
-
-<!--        &lt;!&ndash; If we need scrollbar &ndash;&gt;-->
-<!--        <div class="swiper-scrollbar"></div>-->
+        <label class="read-more" for="show-hide"></label>
+        <!--        </div>-->
     </div>
+
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="slider.js"></script>
