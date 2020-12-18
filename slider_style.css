@@ -47,10 +47,9 @@ p {
   fill: #FFFFFF;
   stroke: #FF3E79;
   padding: 0;
-  background: none;
   border: none;
-  transition-property: fill, transform;
-  transition-duration: 0.3s, 0.7s;
+  transition-duration: 0.3s;
+  background: url("img/labels/go.svg");
 }
 .icon:focus {
   outline: none;
@@ -152,6 +151,7 @@ p {
   padding: 0 16px;
   border: 1px solid #E5E5E5;
   margin-bottom: 16px;
+  transition-duration: 0.3s;
 }
 @media (min-width: 768px) {
   .wrapper .image-slider__image {
@@ -163,8 +163,12 @@ p {
     width: 100%;
   }
 }
+.wrapper .image-slider__image:hover {
+  box-shadow: 0 5px 5px 1px #EAEAEA;
+}
 .wrapper .image-slider__image:hover > .icon {
-  stroke: #41F6D7;
+  background: url("img/labels/go--hover.svg");
+  filter: drop-shadow(0 5px 1px #EAEAEA);
 }
 .wrapper .read-more-input {
   opacity: 0;

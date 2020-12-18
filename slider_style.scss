@@ -10,14 +10,9 @@
   fill: $white;
   stroke: #FF3E79;
   padding: 0;
-  background: none;
   border: none;
-  transition-property: fill, transform;
-  transition-duration: 0.3s, 0.7s;
-
-  //&:hover {
-  //  stroke: $highlighter;
-  //}
+  transition-duration:  0.3s;
+  background: url("img/labels/go.svg");
 
   &:focus {
     outline: none;
@@ -116,6 +111,7 @@
       padding: 0 16px;
       border: 1px solid $darkgrey;
       margin-bottom: 16px;
+      transition-duration:  0.3s;
 
       @media (min-width: 768px) {
         width: 100%;
@@ -123,8 +119,15 @@
       @media (min-width: 1120px) {
         width: 100%;
       }
+      &:hover{
+        box-shadow: 0 5px 5px 1px #EAEAEA;
+      }
+
+
+
       &:hover > .icon{
-        stroke: $highlighter;
+        background: url("img/labels/go--hover.svg");
+        filter: drop-shadow(0 5px 1px #EAEAEA);
       }
     }
   }
