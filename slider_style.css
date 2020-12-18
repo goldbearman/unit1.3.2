@@ -146,7 +146,7 @@ p {
   background-color: #FFFFFF;
   margin-right: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 16px;
   border: 1px solid #E5E5E5;
@@ -170,6 +170,33 @@ p {
   background: url("img/labels/go--hover.svg");
   filter: drop-shadow(0 5px 1px #EAEAEA);
 }
+.wrapper .image-slider__image-lenovo {
+  background: white url("img/labels/lenovo.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-lenovo {
+  background: white url("img/labels/lenovo.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-apple {
+  background: white url("img/labels/apple.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-acer {
+  background: white url("img/labels/acer.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-samsung {
+  background: white url("img/labels/samsung.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-sony {
+  background: white url("img/labels/sony.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-bosh {
+  background: white url("img/labels/bosh.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-viewsonic {
+  background: white url("img/labels/viewsonic.png") no-repeat 12%;
+}
+.wrapper .image-slider__image-hp {
+  background: white url("img/labels/hp.png") no-repeat 12%;
+}
 .wrapper .read-more-input {
   opacity: 0;
   position: absolute;
@@ -188,7 +215,7 @@ p {
   color: #1B1C21;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .wrapper .read-more {
     display: none;
   }

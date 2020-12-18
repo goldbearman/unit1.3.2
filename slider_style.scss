@@ -106,7 +106,7 @@
       background-color: $white;
       margin-right: 16px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       padding: 0 16px;
       border: 1px solid $darkgrey;
@@ -123,12 +123,43 @@
         box-shadow: 0 5px 5px 1px #EAEAEA;
       }
 
-
-
       &:hover > .icon{
         background: url("img/labels/go--hover.svg");
         filter: drop-shadow(0 5px 1px #EAEAEA);
       }
+    }
+    &__image-lenovo{
+      background:white url("img/labels/lenovo.png") no-repeat 12%;
+      //, white url("img/labels/go.svg") no-repeat 92%;
+      //&:hover{
+      //  background:url("img/labels/lenovo.png") no-repeat 12%
+      //  , white url("img/labels/go--hover.svg") no-repeat 92%;
+      //  filter: drop-shadow(0 5px 1px #EAEAEA);
+      //}
+    }
+    &__image-lenovo {
+      background: white url("img/labels/lenovo.png") no-repeat 12%;
+    }
+    &__image-apple {
+      background: white url("img/labels/apple.png") no-repeat 12%;
+    }
+    &__image-acer {
+      background: white url("img/labels/acer.png") no-repeat 12%;
+    }
+    &__image-samsung {
+      background: white url("img/labels/samsung.png") no-repeat 12%;
+    }
+    &__image-sony {
+      background: white url("img/labels/sony.png") no-repeat 12%;
+    }
+    &__image-bosh {
+      background: white url("img/labels/bosh.png") no-repeat 12%;
+    }
+    &__image-viewsonic {
+      background: white url("img/labels/viewsonic.png") no-repeat 12%;
+    }
+    &__image-hp {
+      background: white url("img/labels/hp.png") no-repeat 12%;
     }
   }
 
@@ -153,7 +184,7 @@
     position: relative;
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
 

@@ -2,7 +2,7 @@ const slider = document.querySelector('.swiper-container');
 let mySwiper;
 
 function mobileSlider() {
-    if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+    if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
         mySwiper = new Swiper('.image-slider', {
             // If we need pagination
             pagination: {
