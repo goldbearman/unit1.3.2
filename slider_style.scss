@@ -73,8 +73,11 @@
     }
 
     &__slide{
-      width: auto;
-      display: inline-block;
+      //width: auto;
+      display: block;
+      height: 72px;
+      background:white url("img/labels/go.svg") no-repeat 92% ;
+
       @media (min-width: 768px) {
         width: 30%;
         margin: 0 1.66%;
@@ -99,25 +102,30 @@
     }
 
     &__image {
+      display: block;
       text-align: center;
-      width: 240px;
+      width: auto;
       height: 72px;
       border-radius: 6px;
-      background-color: $white;
-      margin-right: 16px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0 16px;
+      //background-color: $white;
+      //margin-right: 16px;
+      //display: flex;
+      //justify-content: flex-end;
+      //align-items: center;
+      //padding: 0 16px;
       border: 1px solid $darkgrey;
       margin-bottom: 16px;
       transition-duration:  0.3s;
 
+      z-index: 100;
+
+
+
       @media (min-width: 768px) {
-        width: 100%;
+        //width: 100%;
       }
       @media (min-width: 1120px) {
-        width: 100%;
+        //width: 100%;
       }
       &:hover{
         box-shadow: 0 5px 5px 1px #EAEAEA;
@@ -128,23 +136,25 @@
         filter: drop-shadow(0 5px 1px #EAEAEA);
       }
     }
-    &__image-lenovo{
-      background:white url("img/labels/lenovo.png") no-repeat 12%;
+    //&__image-lenovo{
+    //  //width: 100px;
+    //  //height: auto;
+    //  background: url("img/labels/lenovo.png") no-repeat 100px 50px;
       //, white url("img/labels/go.svg") no-repeat 92%;
       //&:hover{
       //  background:url("img/labels/lenovo.png") no-repeat 12%
       //  , white url("img/labels/go--hover.svg") no-repeat 92%;
       //  filter: drop-shadow(0 5px 1px #EAEAEA);
       //}
-    }
+    //}
     &__image-lenovo {
-      background: white url("img/labels/lenovo.png") no-repeat 12%;
+      background: url("img/labels/lenovo.png") no-repeat 12%;
     }
     &__image-apple {
-      background: white url("img/labels/apple.png") no-repeat 12%;
+      background:url("img/labels/apple.png") no-repeat 12%;
     }
     &__image-acer {
-      background: white url("img/labels/acer.png") no-repeat 12%;
+      background:url("img/labels/acer.png") no-repeat 12%;
     }
     &__image-samsung {
       background: white url("img/labels/samsung.png") no-repeat 12%;

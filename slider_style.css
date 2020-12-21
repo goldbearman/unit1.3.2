@@ -110,8 +110,9 @@ p {
   max-height: none;
 }
 .wrapper .image-slider__slide {
-  width: auto;
-  display: inline-block;
+  display: block;
+  height: 72px;
+  background: white url("img/labels/go.svg") no-repeat 92%;
 }
 @media (min-width: 768px) {
   .wrapper .image-slider__slide {
@@ -139,29 +140,15 @@ p {
   background-color: #979797;
 }
 .wrapper .image-slider__image {
+  display: block;
   text-align: center;
-  width: 240px;
+  width: auto;
   height: 72px;
   border-radius: 6px;
-  background-color: #FFFFFF;
-  margin-right: 16px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 16px;
   border: 1px solid #E5E5E5;
   margin-bottom: 16px;
   transition-duration: 0.3s;
-}
-@media (min-width: 768px) {
-  .wrapper .image-slider__image {
-    width: 100%;
-  }
-}
-@media (min-width: 1120px) {
-  .wrapper .image-slider__image {
-    width: 100%;
-  }
+  z-index: 100;
 }
 .wrapper .image-slider__image:hover {
   box-shadow: 0 5px 5px 1px #EAEAEA;
@@ -171,16 +158,13 @@ p {
   filter: drop-shadow(0 5px 1px #EAEAEA);
 }
 .wrapper .image-slider__image-lenovo {
-  background: white url("img/labels/lenovo.png") no-repeat 12%;
-}
-.wrapper .image-slider__image-lenovo {
-  background: white url("img/labels/lenovo.png") no-repeat 12%;
+  background: url("img/labels/lenovo.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-apple {
-  background: white url("img/labels/apple.png") no-repeat 12%;
+  background: url("img/labels/apple.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-acer {
-  background: white url("img/labels/acer.png") no-repeat 12%;
+  background: url("img/labels/acer.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-samsung {
   background: white url("img/labels/samsung.png") no-repeat 12%;
