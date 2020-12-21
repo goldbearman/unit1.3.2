@@ -110,24 +110,33 @@ p {
   max-height: none;
 }
 .wrapper .image-slider__slide {
+  width: 240px;
   display: block;
   height: 72px;
+  border-radius: 6px;
   background: white url("img/labels/go.svg") no-repeat 92%;
+  margin-right: 16px;
+  transition-duration: 0.3s;
+  transition-property: background, box-shadow;
 }
 @media (min-width: 768px) {
   .wrapper .image-slider__slide {
     width: 30%;
-    margin: 0 1.66%;
+    margin: 0 1.66% 16px 1.66%;
   }
 }
 @media (min-width: 1120px) {
   .wrapper .image-slider__slide {
     width: 22%;
-    margin: 0 1.5%;
+    margin: 0 1.5% 16px 1.5%;
   }
 }
+.wrapper .image-slider__slide:hover {
+  background: white url("img/labels/go--hover.svg") no-repeat 92%;
+  box-shadow: 0 5px 5px 1px #EAEAEA;
+}
 .wrapper .image-slider .swiper-pagination {
-  bottom: 50px;
+  bottom: 35px;
 }
 @media (min-width: 768px) {
   .wrapper .image-slider .swiper-pagination {
@@ -147,15 +156,7 @@ p {
   border-radius: 6px;
   border: 1px solid #E5E5E5;
   margin-bottom: 16px;
-  transition-duration: 0.3s;
   z-index: 100;
-}
-.wrapper .image-slider__image:hover {
-  box-shadow: 0 5px 5px 1px #EAEAEA;
-}
-.wrapper .image-slider__image:hover > .icon {
-  background: url("img/labels/go--hover.svg");
-  filter: drop-shadow(0 5px 1px #EAEAEA);
 }
 .wrapper .image-slider__image-lenovo {
   background: url("img/labels/lenovo.png") no-repeat 12%;
@@ -167,19 +168,19 @@ p {
   background: url("img/labels/acer.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-samsung {
-  background: white url("img/labels/samsung.png") no-repeat 12%;
+  background: url("img/labels/samsung.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-sony {
-  background: white url("img/labels/sony.png") no-repeat 12%;
+  background: url("img/labels/sony.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-bosh {
-  background: white url("img/labels/bosh.png") no-repeat 12%;
+  background: url("img/labels/bosh.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-viewsonic {
-  background: white url("img/labels/viewsonic.png") no-repeat 12%;
+  background: url("img/labels/viewsonic.png") no-repeat 12%;
 }
 .wrapper .image-slider__image-hp {
-  background: white url("img/labels/hp.png") no-repeat 12%;
+  background: url("img/labels/hp.png") no-repeat 12%;
 }
 .wrapper .read-more-input {
   opacity: 0;

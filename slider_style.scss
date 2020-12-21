@@ -11,7 +11,7 @@
   stroke: #FF3E79;
   padding: 0;
   border: none;
-  transition-duration:  0.3s;
+  transition-duration: 0.3s;
   background: url("img/labels/go.svg");
 
   &:focus {
@@ -72,24 +72,34 @@
       max-height: none;
     }
 
-    &__slide{
-      //width: auto;
+    &__slide {
+      width: 240px;
       display: block;
       height: 72px;
-      background:white url("img/labels/go.svg") no-repeat 92% ;
+      border-radius: 6px;
+      background: white url("img/labels/go.svg") no-repeat 92%;
+      margin-right: 16px;
+      transition-duration: 0.3s;
+      transition-property: background, box-shadow;
 
       @media (min-width: 768px) {
         width: 30%;
-        margin: 0 1.66%;
+        margin: 0 1.66% 16px 1.66%;
       }
       @media (min-width: 1120px) {
         width: 22%;
-        margin: 0 1.5%;
+        margin: 0 1.5% 16px 1.5%;
+      }
+
+      &:hover {
+        background: white url("img/labels/go--hover.svg") no-repeat 92%;
+        //filter: drop-shadow(0 5px 1px #EAEAEA);
+        box-shadow: 0 5px 5px 1px #EAEAEA;
       }
     }
 
     .swiper-pagination {
-      bottom: 50px;
+      bottom: 35px;
       @media (min-width: 768px) {
         display: none;
       }
@@ -107,18 +117,11 @@
       width: auto;
       height: 72px;
       border-radius: 6px;
-      //background-color: $white;
-      //margin-right: 16px;
-      //display: flex;
-      //justify-content: flex-end;
-      //align-items: center;
-      //padding: 0 16px;
       border: 1px solid $darkgrey;
       margin-bottom: 16px;
-      transition-duration:  0.3s;
+
 
       z-index: 100;
-
 
 
       @media (min-width: 768px) {
@@ -127,49 +130,58 @@
       @media (min-width: 1120px) {
         //width: 100%;
       }
-      &:hover{
-        box-shadow: 0 5px 5px 1px #EAEAEA;
-      }
 
-      &:hover > .icon{
-        background: url("img/labels/go--hover.svg");
-        filter: drop-shadow(0 5px 1px #EAEAEA);
-      }
+      //&:hover {
+      //  box-shadow: 0 5px 5px 1px #EAEAEA;
+      //}
+
+      //&:hover > .icon {
+      //  background: url("img/labels/go--hover.svg");
+      //  filter: drop-shadow(0 5px 1px #EAEAEA);
+      //}
     }
+
     //&__image-lenovo{
     //  //width: 100px;
     //  //height: auto;
     //  background: url("img/labels/lenovo.png") no-repeat 100px 50px;
-      //, white url("img/labels/go.svg") no-repeat 92%;
-      //&:hover{
-      //  background:url("img/labels/lenovo.png") no-repeat 12%
-      //  , white url("img/labels/go--hover.svg") no-repeat 92%;
-      //  filter: drop-shadow(0 5px 1px #EAEAEA);
-      //}
+    //, white url("img/labels/go.svg") no-repeat 92%;
+    //&:hover{
+    //  background:url("img/labels/lenovo.png") no-repeat 12%
+    //  , white url("img/labels/go--hover.svg") no-repeat 92%;
+    //  filter: drop-shadow(0 5px 1px #EAEAEA);
+    //}
     //}
     &__image-lenovo {
       background: url("img/labels/lenovo.png") no-repeat 12%;
     }
+
     &__image-apple {
-      background:url("img/labels/apple.png") no-repeat 12%;
+      background: url("img/labels/apple.png") no-repeat 12%;
     }
+
     &__image-acer {
-      background:url("img/labels/acer.png") no-repeat 12%;
+      background: url("img/labels/acer.png") no-repeat 12%;
     }
+
     &__image-samsung {
-      background: white url("img/labels/samsung.png") no-repeat 12%;
+      background: url("img/labels/samsung.png") no-repeat 12%;
     }
+
     &__image-sony {
-      background: white url("img/labels/sony.png") no-repeat 12%;
+      background: url("img/labels/sony.png") no-repeat 12%;
     }
+
     &__image-bosh {
-      background: white url("img/labels/bosh.png") no-repeat 12%;
+      background: url("img/labels/bosh.png") no-repeat 12%;
     }
+
     &__image-viewsonic {
-      background: white url("img/labels/viewsonic.png") no-repeat 12%;
+      background: url("img/labels/viewsonic.png") no-repeat 12%;
     }
+
     &__image-hp {
-      background: white url("img/labels/hp.png") no-repeat 12%;
+      background: url("img/labels/hp.png") no-repeat 12%;
     }
   }
 
@@ -177,7 +189,8 @@
     opacity: 0;
     position: absolute;
     top: 0;
-    &:focus ~ label[for="show-hide"]{
+
+    &:focus ~ label[for="show-hide"] {
       border-radius: 3px;
       color: $button-border-hover;
     }
