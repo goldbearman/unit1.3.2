@@ -190,6 +190,7 @@
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 1px;
 
   &__title {
     padding: 16px;
@@ -213,19 +214,19 @@
 
     @media (min-width: 768px) {
       margin: 0 12px;
-      height: 425px;
+      //height: 425px;
       padding: 16px;
 
     }
 
     &__wrapper {
-      height: 200px;
-      width: 260px;
+      //height: 200px;
+      //width: 260px;
       padding-left: 0;
 
-      background: white;
+      //background: white;
       @media (min-width: 768px) {
-      margin: 60px 0 0 0;
+        margin: 60px 0 0 0;
         //display: flex;
         //flex-wrap: wrap;
         //overflow: hidden;
@@ -234,11 +235,10 @@
         display: block;
         align-items: center;
         border-radius: 6px;
+        background: white;
 
       }
     }
-
-
 
 
     .read-more-input:checked ~ .swiper-wrapper {
@@ -246,12 +246,14 @@
     }
 
     &__slide {
+      height: 200px;
+      width: 260px;
       display: block;
       padding: 16px;
       font-size: 14px;
       line-height: 18px;
-      height: 100%;
-      border-radius: 16px;
+      //height: 100%;
+      border-radius: 6px;
       background-color: $white;
       //border: 1px solid $darkgrey;
       margin-right: 16px;
@@ -274,7 +276,7 @@
         border-radius: 0;
         background-color: transparent;
 
-        &:first-child,&:last-child{
+        &:first-child, &:last-child {
           border: none;
         }
 
@@ -343,18 +345,15 @@
       }
     }
 
-    .head-t {
+    .table-head {
       margin-top: -65px;
       position: absolute;
       color: $text;
 
-
       @media (max-width: 768px) {
         display: none;
       }
-
     }
-
 
     .swiper-pagination {
       bottom: 35px;
@@ -414,4 +413,60 @@
     background: url("img/expand-up.svg") no-repeat 0 0;
   }
 
+  &__explanation {
+    max-width: 421px;
+    margin-left: 32px;
+
+    & p {
+      font-size: 14px;
+    }
+
+    & a {
+      display: inline-block;
+      padding-right: 30px;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 500;
+      color: $text-all;
+      background: url("img/more.png") no-repeat 98%;
+      transition-duration: 0.3s;
+
+      &:hover {
+        color: $text-hover;
+      }
+    }
+  }
 }
+
+//---------------------------footer-------------------------
+
+.owner-information {
+  max-width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $text;
+  margin: 47px auto 0;
+  //height: 105px;
+
+
+  //@media (max-width: 768px) {
+  //  justify-content: center;
+  //}
+
+
+  &__items {
+    width: 30%;
+    padding-bottom: 16px;
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+

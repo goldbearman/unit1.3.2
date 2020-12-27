@@ -201,6 +201,7 @@ p {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 1px;
 }
 .price__title {
   padding: 16px;
@@ -226,15 +227,11 @@ p {
 @media (min-width: 768px) {
   .price .price-slider {
     margin: 0 12px;
-    height: 425px;
     padding: 16px;
   }
 }
 .price .price-slider__wrapper {
-  height: 200px;
-  width: 260px;
   padding-left: 0;
-  background: white;
 }
 @media (min-width: 768px) {
   .price .price-slider__wrapper {
@@ -244,18 +241,20 @@ p {
     display: block;
     align-items: center;
     border-radius: 6px;
+    background: white;
   }
 }
 .price .price-slider .read-more-input:checked ~ .swiper-wrapper {
   max-height: none;
 }
 .price .price-slider__slide {
+  height: 200px;
+  width: 260px;
   display: block;
   padding: 16px;
   font-size: 14px;
   line-height: 18px;
-  height: 100%;
-  border-radius: 16px;
+  border-radius: 6px;
   background-color: #FFFFFF;
   margin-right: 16px;
   transition-duration: 0.3s;
@@ -329,13 +328,13 @@ p {
   border: none;
   font-family: "TTLakes", sans-serif;
 }
-.price .price-slider .head-t {
+.price .price-slider .table-head {
   margin-top: -65px;
   position: absolute;
   color: #7E7E82;
 }
 @media (max-width: 768px) {
-  .price .price-slider .head-t {
+  .price .price-slider .table-head {
     display: none;
   }
 }
@@ -386,6 +385,51 @@ p {
 .price .read-more-input:checked ~ .read-more:after {
   content: "Скрыть";
   background: url("img/expand-up.svg") no-repeat 0 0;
+}
+.price__explanation {
+  max-width: 421px;
+  margin-left: 32px;
+}
+.price__explanation p {
+  font-size: 14px;
+}
+.price__explanation a {
+  display: inline-block;
+  padding-right: 30px;
+  margin-top: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #1B1C21;
+  background: url("img/more.png") no-repeat 98%;
+  transition-duration: 0.3s;
+}
+.price__explanation a:hover {
+  color: #FF3E79;
+}
+
+.owner-information {
+  max-width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #7E7E82;
+  margin: 47px auto 0;
+}
+.owner-information__items {
+  width: 30%;
+  padding-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .owner-information__items {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .owner-information {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=slider_style.css.map */
