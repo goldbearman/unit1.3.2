@@ -1,9 +1,12 @@
-const slider = document.querySelector('.swiper-container');
+let slider = document.querySelector('.swiper-container');
 let mySwiper;
+
+let technicSlider = '.technic-slider';
+let priceSlider = '.price-slider';
 
 function mobileSlider() {
     if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
-        mySwiper = new Swiper('.image-slider', {
+        mySwiper = new Swiper('.swiper-container', {
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
@@ -32,11 +35,18 @@ function mobileSlider() {
         }
     }
 }
-
 mobileSlider();
 window.addEventListener('resize', () => {
     mobileSlider();
 });
+
+// mobileSlider(technicSlider);
+// window.addEventListener('resize', () => {
+//     mobileSlider(technicSlider);
+// });
+
+
+// console.log(slider);
 
 // var makeElement = function (tagName, className, text) {
 //     var element = document.createElement(tagName);

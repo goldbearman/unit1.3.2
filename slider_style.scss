@@ -44,7 +44,7 @@
     }
   }
 
-  .image-slider {
+  .technic-slider {
     padding: 16px 0 70px 0;
     margin: 0 16px;
     white-space: normal;
@@ -75,12 +75,14 @@
     &__slide {
       width: 240px;
       display: block;
-      height: 72px;
+      height: 160px;
       border-radius: 6px;
-      background: white url("img/labels/go.svg") no-repeat 92%;
+      border: 1px solid $darkgrey;
+      background: white url("img/labels/go.svg") no-repeat 92% 88%;
       margin-right: 16px;
       transition-duration: 0.3s;
       transition-property: background, box-shadow;
+
 
       @media (min-width: 768px) {
         width: 30%;
@@ -113,12 +115,13 @@
 
     &__image {
       display: block;
-      text-align: center;
+
       width: auto;
-      height: 72px;
+      height: 100%;
       border-radius: 6px;
-      border: 1px solid $darkgrey;
-      margin-bottom: 16px;
+      text-decoration: none;
+      color: $text-all;
+      padding: 16px;
 
 
       z-index: 100;
@@ -130,59 +133,243 @@
       @media (min-width: 1120px) {
         //width: 100%;
       }
+    }
+  }
 
-      //&:hover {
-      //  box-shadow: 0 5px 5px 1px #EAEAEA;
+  .read-more-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+
+    &:focus ~ label[for="show-hide"] {
+      border-radius: 3px;
+      color: $button-border-hover;
+    }
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 1.6%;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: $text-all;
+    position: relative;
+
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    &:hover {
+      color: $button-border-hover;
+    }
+  }
+
+  .read-more-input ~ .read-more:after {
+    content: 'Показать все';
+    padding-left: 27px;
+    background: url("img/expand.svg") no-repeat 0 -1px;
+  }
+
+  .read-more-input:checked ~ .read-more:after {
+    content: 'Скрыть';
+    background: url("img/expand-up.svg") no-repeat 0 0;
+  }
+
+}
+
+
+//---------------------price----------------------------
+
+.price {
+  //padding: 30px;
+  min-height: 100%;
+  background-color: $grey;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__title {
+    padding: 16px;
+    background-image: linear-gradient(to right, $grey, $white);
+
+    text-transform: uppercase;
+    border-top: 1px solid $slider-devider;
+
+    @media (min-width: 768px) {
+      padding: 16px 26px;
+    }
+    @media (min-width: 1120px) {
+      padding: 16px 32px;
+    }
+  }
+
+  .price-slider {
+    padding: 16px 0 70px 0;
+    margin: 0 16px;
+    white-space: normal;
+
+    @media (min-width: 768px) {
+      margin: 0 12px;
+      height: 425px;
+      padding: 16px;
+
+    }
+
+    &__wrapper {
+      height: 200px;
+      width: 260px;
+      padding-left: 0;
+
+      background: white;
+      @media (min-width: 768px) {
+      margin: 60px 0 0 0;
+        //display: flex;
+        //flex-wrap: wrap;
+        //overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: block;
+        align-items: center;
+        border-radius: 6px;
+
+      }
+    }
+
+
+
+
+    .read-more-input:checked ~ .swiper-wrapper {
+      max-height: none;
+    }
+
+    &__slide {
+      display: block;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 18px;
+      height: 100%;
+      border-radius: 16px;
+      background-color: $white;
+      //border: 1px solid $darkgrey;
+      margin-right: 16px;
+
+      transition-duration: 0.3s;
+      transition-property: background, box-shadow;
+      //position: relative;
+
+
+      @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        height: 65px;
+        padding: 16px;
+        //margin: 0 16px;
+        //margin:0 16px;
+        border-bottom: 1px solid $divider-price;
+        margin-right: 16px;
+        //margin-left: 3%;
+        border-radius: 0;
+        background-color: transparent;
+
+        &:first-child,&:last-child{
+          border: none;
+        }
+
+      }
+      //@media (min-width: 1120px) {
+      //  //width: 22%;
+      //  //margin: 0 1.5% 16px 1.5%;
       //}
 
-      //&:hover > .icon {
-      //  background: url("img/labels/go--hover.svg");
-      //  filter: drop-shadow(0 5px 1px #EAEAEA);
-      //}
+
+      .information-hidden {
+        font-size: 14px;
+        color: $text;
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+
+      .information-name, .information-price, .information-time {
+        padding-bottom: 16px;
+        font-weight: 500;
+        vertical-align: center;
+        @media (min-width: 768px) {
+          padding: 0;
+          display: flex;
+          align-items: center;
+
+        }
+      }
+
+      .information-name {
+        @media (min-width: 768px) {
+          padding: 0;
+          width: 55%;
+        }
+      }
+
+      .information-price {
+        @media (min-width: 768px) {
+          padding: 0;
+          width: 15%;
+        }
+      }
+
+      .information-time {
+        @media (min-width: 768px) {
+          padding: 0;
+          width: 20%;
+        }
+      }
+
+
+      .information-button {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        font-weight: 700;
+        border-radius: 16px;
+        font-size: 12px;
+        color: $white;
+        text-transform: uppercase;
+        background: $button-border-hover url("img/dropdown.png") no-repeat 88%;
+        padding: 8px 41px 8px 12px;
+        border: none;
+        font-family: "TTLakes", sans-serif;
+      }
     }
 
-    //&__image-lenovo{
-    //  //width: 100px;
-    //  //height: auto;
-    //  background: url("img/labels/lenovo.png") no-repeat 100px 50px;
-    //, white url("img/labels/go.svg") no-repeat 92%;
-    //&:hover{
-    //  background:url("img/labels/lenovo.png") no-repeat 12%
-    //  , white url("img/labels/go--hover.svg") no-repeat 92%;
-    //  filter: drop-shadow(0 5px 1px #EAEAEA);
-    //}
-    //}
-    &__image-lenovo {
-      background: url("img/labels/lenovo.png") no-repeat 12%;
+    .head-t {
+      margin-top: -65px;
+      position: absolute;
+      color: $text;
+
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
     }
 
-    &__image-apple {
-      background: url("img/labels/apple.png") no-repeat 12%;
+
+    .swiper-pagination {
+      bottom: 35px;
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
-    &__image-acer {
-      background: url("img/labels/acer.png") no-repeat 12%;
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: $swiper;
     }
 
-    &__image-samsung {
-      background: url("img/labels/samsung.png") no-repeat 12%;
-    }
 
-    &__image-sony {
-      background: url("img/labels/sony.png") no-repeat 12%;
-    }
-
-    &__image-bosh {
-      background: url("img/labels/bosh.png") no-repeat 12%;
-    }
-
-    &__image-viewsonic {
-      background: url("img/labels/viewsonic.png") no-repeat 12%;
-    }
-
-    &__image-hp {
-      background: url("img/labels/hp.png") no-repeat 12%;
-    }
   }
 
   .read-more-input {
